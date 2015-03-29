@@ -30,3 +30,9 @@
 # Codelite Project
 .codelite
 *.workspace
+*.project
+*.mk
+Makefile
+
+# Build stuff
+debug/
