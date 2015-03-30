@@ -5,16 +5,20 @@ class Engine
 {
 public:
 	int fovRadius;
+	int screenWidth;
+	int screenHeight;
 	
 	TCODList<Actor *> actors;
 	Actor *player;
 	Map *map;
+	TCOD_key_t lastKey;
 	
-	Engine();
+	Engine(int screenWidth, int screenHeight);
 	~Engine();
 	
 	void update();
 	void render();
+	void sendToBack(Actor *actor);
 
 	enum GameStatus {
 		STARTUP,
